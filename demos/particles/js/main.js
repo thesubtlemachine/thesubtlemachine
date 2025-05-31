@@ -1,6 +1,6 @@
-import { initPyodideAndPackages } from '../../common/js/pyodide-bridge.js';
-import { createScene } from '../../common/js/renderer.js';
-import { setupUI } from '../../common/js/ui.js';
+import { initPyodideAndPackages } from '../../../common/js/pyodide-bridge.js';
+import { createScene } from '../../../common/js/renderer.js';
+import { setupUI } from '../../../common/js/ui.js';
 
 let pyodide;
 const particleCount = 200;
@@ -9,7 +9,7 @@ async function main() {
     pyodide = await initPyodideAndPackages();
 
     // Load simulation.py into Pyodide virtual FS
-    const response = await fetch('../py/simulation.py');
+    const response = await fetch('py/simulation.py');
     const code = await response.text();
     pyodide.runPython(code);
     pyodide.runPython('initialize()');
