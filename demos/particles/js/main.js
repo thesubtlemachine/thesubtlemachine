@@ -1,9 +1,9 @@
 import { initPyodideAndPackages } from '../../../common/js/pyodide-bridge.js';
-import { createScene } from '../../../common/js/renderer.js';
-import { setupUI } from '../../../common/js/ui.js';
+import { createScene } from './renderer.js';
+import { setupUI } from './ui.js';
 
 let pyodide;
-const particleCount = 200;
+const particleCount = 1000;
 
 async function main() {
     pyodide = await initPyodideAndPackages();

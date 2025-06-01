@@ -3,7 +3,9 @@ export function createScene(canvas, particleCount) {
     renderer.setSize(window.innerWidth, window.innerHeight);
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.z = 2;
+    camera.position.y = 2;
+    camera.up.set(0, 0, 1);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
 
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
