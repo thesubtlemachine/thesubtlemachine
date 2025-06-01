@@ -1,21 +1,37 @@
-<style>
-  .iframe-container {
-    position: relative;
-    width: 100%;
-    /* 4:3 aspect ratio (change to 56.25% for 16:9, etc.) */
-    padding-bottom: 75%;
-    height: 0;
-    overflow: hidden;
-  }
-  .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subtle Machine Model Viewer</title>
+  <!-- Ensure proper scaling on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Remove default margin/padding and ensure full width/height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* Responsive 4:3 aspect ratio container for iframe */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 75%; /* 4:3 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
 <body>
   <div class="iframe-container">
     <iframe 
@@ -30,3 +46,4 @@
     </iframe>
   </div>
 </body>
+</html>
