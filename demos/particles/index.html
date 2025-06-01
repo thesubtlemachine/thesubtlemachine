@@ -7,9 +7,35 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="../../common/css/style.css">
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 4 / 3;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-    <canvas id="renderCanvas"></canvas>
+    <div class="container">
+        <canvas id="renderCanvas"></canvas>
+    </div>
 </body>
 </html>
-
