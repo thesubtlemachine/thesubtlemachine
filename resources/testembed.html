@@ -5,21 +5,25 @@
   <title>Subtle Machine Model Viewer</title>
 
   <style>
+    /* Full viewport setup, removes scrollbars and margins */
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       width: 100%;
     }
 
     iframe {
       width: 100%;
+      max-width: 100%;
       border: 0;
     }
   </style>
 </head>
 
 <body>
-  <iframe 
+  <div class="container">
+    <iframe 
     title="Subtle Mechanism Dodeca"
     frameborder="0" 
     allowfullscreen 
@@ -27,7 +31,8 @@
     webkitallowfullscreen="true" 
     allow="autoplay; fullscreen; xr-spatial-tracking" 
     xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-    src="https://sketchfab.com/models/34205eb724ae4be59db8d60c0a997c33/embed?autospin=1&autostart=1&dnt=1">
-  </iframe>
+    src="https://sketchfab.com/models/34205eb724ae4be59db8d60c0a997c33/embed?autospin=1&autostart=1&dnt=1"> 
+    </iframe> 
+</div>
 </body>
 </html>
